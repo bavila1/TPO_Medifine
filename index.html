@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/favico.ico">
+</head>
+
+<body>
+    <header id="header">
+        <div id="translate">
+        </div>
+        <div class="logo">
+            <img id="img_logo" src="media/logo.png" alt="img_logo">
+        </div>
+        <div class="nav">
+            <nav id="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#empresa">Empresa</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="inicio">
+            <div id="inicio">
+                <img id="img_doctor_inicio" src="media/doctor_inicio.png" alt="img_doctor_1">
+            </div>
+            <button>Conocer más</button>
+        </section>
+
+        <!-- Inicio Apartado Crear Usuario -->
+        <section id="crear_usuario">
+            <h2>Accede a todos nuestros beneficios</h2>
+            <p>Creando un usuario en nuestra web y agendando turno con cualquiera de nuestros profesionales al instante
+            </p>
+            <button>Inscribite aquí</button>
+
+        </section>
+        <!-- Fin Apartado Crear Usuario -->
+
+        <!-- Inicio del Fomrulario -->
+        <section id="contacto">
+            <h1>Contactanos</h1>
+            <p>Ingresa tus datos y escribinos tus consultas</p>
+
+            <form class="Formulario" Id="Formulario">
+                <div>
+                    <label for="correo_usuario"></label>
+                    <input type="email" name="correo_usuario" required id="correo_usuario" size="50"
+                        placeholder="Ingrese su correo electronico">
+                </div>
+                <br>
+                <div>
+                    <label for="celular_usuario"></label>
+                    <input type="tel" name="celular_usuario" min="0" pattern="^[0-9]+" maxlength="10" required
+                        id="celular_usuario" size="50" placeholder="Ingrese su número de celular">
+                </div>
+                <br>
+                <div>
+                    <label for="comentario"></label>
+                    <textarea type="text" name="comentario" maxlength="100" required id="comentario" cols="52" rows="10"
+                        placeholder="Ingrese su comentario"></textarea>
+                </div>
+                <br>
+                <input type="submit" value="Enviar" id="enviar">
+            </form>
+        </section>
+        <!-- Fin del Formulario -->
+
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
