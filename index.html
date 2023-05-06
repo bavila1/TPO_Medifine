@@ -12,19 +12,27 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/media/logo.png" alt="Logo_Medifine">
+            <img src="./media/logo.png" alt="Logo_Medifine">
         </div>
         <div class="titulo">
             <h1>MEDIFINE</h1>
         </div>
-        <nav>
+        <!-- Menú hamburguesa -->
+        <div class="menuHamburguesa">
+            <input type="checkbox" id="menuCheckbox">
+            <label for="menuCheckbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </nav>
+        </div>
+        <!--Fin menu hamburguesa  -->
     </header>
     <main class="container">
         <!-- INICIO -->
@@ -45,8 +53,7 @@
             <h1>Servicios</h1>
             <div class="contenedorServicios">
                 <div class="card">
-                    <a href="https://www.flaticon.es/iconos-gratis/ordenador-portatil" title="ordenador portátil iconos"></a>
-                    <!-- <img src="./media/iconos/videollamada.png"> -->
+                    <img src="./media/iconos/videollamada.png">
                     <h3>Conéctate con tu médico desde cualquier lugar y en cualquier momento con nuestro portal de
                         Videoconsulta.
                     </h3>
