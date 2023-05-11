@@ -1,286 +1,193 @@
-/* Estilos generales */
+/* Inicio Estilos Generales */
+
 * {
-  box-sizing: border-box;
-  font-family: "Montserrat", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-body {
-  color: black;
-}
-h1 {
-  text-align: center;
-  margin: 0;
-  font-size: 50px;
-  color: rgb(255, 91, 98);
+    font-family: "Montserrat", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 0px;
 }
 
-/* Estilo Botones */
-button {
-  background-color: rgb(255, 91, 98);
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  font-weight: bold;
-  padding: 16px 35px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgb(238, 65, 65);
+.inicio {
+    display: flex;
 }
 
-/* Encabezado */
-header {
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  position: fixed;
-  top: 0;
+.iconos_inicio {
+    display: flex;
+    flex-flow: column wrap;
 }
 
-header img {
-  width: 100%;
-  max-width: 100px;
+.icono {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    box-sizing: border-box;
 }
 
-.logo {
-  grid-column: 1 / 2;
+.contenido_inicio {
+    display: flex;
 }
 
-.titulo {
-  grid-column: 2 / 3;
+#presentacion_1 {
+    color: rgb(8, 75, 143);
+    box-sizing: border-box;
+    font-weight: 400;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  grid-column: 3 / 4;
-  margin-top: 10px;
-  font-size: 20px;
+#presentacion_2 {
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-weight: 300;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+#conocer_mas {
+    background-color: rgb(236, 107, 107);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    box-sizing: border-box;
+    height: 60px;
 }
 
-nav li {
-  margin-right: 10px;
-  display: inline-block;
+#conocer_mas:hover {
+    cursor: pointer;
+    background-color: rgb(240, 71, 71);
+    box-sizing: border-box;
 }
 
-/* Estilos Enlaces */
-a:link {
-  color: black;
+#conocer_mas:active {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+    box-sizing: border-box;
 }
 
-a:hover {
-  color: rgb(255, 91, 98);
+/* Fin Estilos generales */
+
+/* Inicio Estilos Inicio */
+
+/* Estilos Smartphone */
+@media screen and (max-width:400px) {
+    .inicio {
+        flex-flow: row wrap;
+        background-image: url(./media/fondo_inicio_smartphone.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .iconos_inicio {
+        display: none;
+    }
+
+    .contenido_inicio {
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+    }
+
+    #presentacion_1 {
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: 32px;
+        margin: 50px 0px;
+        padding: 40px;
+    }
+
+    #presentacion_2 {
+        display: none;
+    }
+
+    #conocer_mas {
+        font-size: 20px;
+        width: 160px;
+        position: relative;
+        left: 50px;
+        margin-bottom: 200px;
+    }
+
 }
 
-a:visited {
-  color: black;
+/* Estilos Tablet */
+@media screen and (min-width:400px) {
+    .inicio {
+        flex-flow: row wrap;
+        justify-content: center;
+        background-image: url(./media/fondo_inicio_desk_tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .iconos_inicio {
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        width: 20%;
+        position: relative;
+        left: 20px;
+    }
+
+    .icono {
+        width: 40%;
+    }
+
+    .contenido_inicio {
+        flex-flow: column wrap;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 60%;
+        padding: 10px 20px;
+    }
+
+    #presentacion_1 {
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #presentacion_2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #conocer_mas {
+        font-size: 20px;
+        width: 180px;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
 }
 
-/* Estilo inicio */
-#inicio {
-  height: 600px;
-  background-color: rgb(158, 239, 233);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  grid-gap: 20px;
-  align-items: center;
+/* Estilos Desktop */
+@media screen and (min-width:800px) {
+    .inicio {
+        flex-flow: row wrap;
+        background-image: url(./media/fondo_inicio_desk_tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+.iconos_inicio{
+    position: relative;
 }
 
-.contenidoInicio {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: large;
-  margin-left: 170px;
-  margin-top: 200px;
-  text-align: justify;
+    .icono {
+        width: 40%;
+    }
+
+    .contenido_inicio {
+        flex-flow: column wrap;
+        width: 50%;
+    }
+
+    #presentacion_1 {
+        font-size: 42px;
+    }
+
+    #presentacion_2 {
+        font-size: 24px;
+    }
+
+    #conocer_mas {
+        font-size: 20px;
+        width: 180px;
+    }
+
 }
 
-.botonConocer {
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-left: 350px;
-}
-
-/* Estilo imagen doctor inicio */
-.imgDoctorInicio {
-  border-radius: 50%;
-  width: 400px;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  margin-left: 100px;
-  margin-top: 150px;
-}
-
-/* Estilo servicios */
-.contenedorServicios {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.servicios .card:hover {
-  background-color: #eee;
-}
-
-.card img {
-  width: 70px;
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  font-size: 20px;
-  margin-top: 20px;
-  text-align: center;
-  color: rgb(255, 91, 98);
-}
-
-.servicios h1 {
-  margin-top: 80px;
-}
-
-/* Estilo Contacto */
-.contenedorContacto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-.contacto {
-  background-color: #eee;
-  padding-top: 80px;
-}
-
-.contacto h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.formulario label {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.formulario input,
-.formulario textarea {
-  display: block;
-  font-size: 16px;
-  padding: 5px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-/* Estilo nosotros */
-.nosotros {
-  background-color: rgb(158, 239, 233);
-  text-align: center;
-}
-.nosotros h1 {
-  padding-top: 80px;
-}
-
-.contenedorNosotros {
-  height: 500px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  align-items: center;
-}
-
-.contenidoNosotros {
-  grid-column: 2 / 3;
-  font-size: large;
-  margin-right: 100px;
-  text-align: justify;
-}
-
-.imgDoctorTecno {
-  grid-column: 1 / 2;
-  width: 650px;
-  margin-left: 50px;
-}
-
-.cardNosotros {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  height: 210px;
-}
-
-.cardNosotros h1 {
-  margin-top: -50px;
-}
-
-.cardNosotros h4 {
-  font-size: 17px;
-  text-align: center;
-  color: black;
-}
-
-/* Estilo Pie de página */
-footer {
-  background-color: rgb(158, 239, 233);
-  font-size: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 100px 30px 30px 30px;
-}
-
-.columna {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.columna img {
-  max-width: 50px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.columna a {
-  text-align: center;
-  color: black;
-}
-
-.texto {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: medium;
-}
+/* Fin Estilos Inicio */

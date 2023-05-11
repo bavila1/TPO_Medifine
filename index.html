@@ -1,165 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medifine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/favico.ico">
+    <link rel="icon" href="./media/favico.ico">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/media/logo.png" alt="Logo_Medifine">
-        </div>
-        <div class="titulo">
-            <h1>MEDIFINE</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="container">
-        <!-- INICIO -->
-        <section id="inicio">
-            <div class="contenidoInicio">
-                <h2>Queremos mejorar la eficiencia y calidad de la atención médica a través de soluciones digitales
-                    avanzadas
-                    para centros de salud, para una atención más segura, personalizada y efectiva en cada paso del
-                    camino.</h2>
+    <main>
+        <!-- Inicio Seccion Inicio -->
+        <section class="inicio">
+            <div class="iconos_inicio">
+                <img class="icono" src="media/icono_inicio_medicos.png" alt="icono medicos">
+                <img class="icono" src="media/icono_inicio_medicamentos.png" alt="icono medicamentos">
+                <img class="icono" src="media/icono_inicio_camilla.png" alt="icono camilla">
             </div>
-            <img class="imgDoctorInicio" src="media/doctor_inicio.png" alt="img_doctor_1">
-            <div class="botonConocer">
-                <button>Conocer más</button>
+            <div class="contenido_inicio">
+                <p id="presentacion_1">
+                    Nueva <b>plataforma de servicios medicos</b> para mejorar la eficiencia y calidad de atención.
+                </p>
+                <p id="presentacion_2">
+                    Con un acceso digital a tus centros de salud, brindamos una atención más segura, personalizada y
+                    efectiva.
+                </p>
+                <button id="conocer_mas">Conoce más</button>
             </div>
         </section>
-        <!-- INICIO SERVICIOS -->
-        <section class="servicios" id="servicios">
-            <h1>Servicios</h1>
-            <div class="contenedorServicios">
-                <div class="card">
-                    <img src="/media/iconos/videollamada.png">
-                    <h3>Conéctate con tu médico desde cualquier lugar y en cualquier momento con nuestro portal de
-                        Videoconsulta.
-                    </h3>
-                </div>
-                <div class="card">
-                    <img src="/media/iconos/pc.png">
-                    <h3>Realiza tus prescripciones de manera rápida y segura con nuestra solución de receta digital.
-                    </h3>
-                </div>
-                <div class="card">
-                    <img src="/media/iconos/hc.png">
-                    <h3>Toda la informacion de la Historia Clínica de tus pacientes en un solo lugar.</h3>
-                </div>
-                <div class="card">
-                    <img src="/media/iconos/monitoreo.png">
-                    <h3>Te permitimos monitorear patologías crónicas, COVID, dengue, protocolos a medida, post
-                        internación, etc.
-                    </h3>
-                </div>
-                <div class="card">
-                    <img src="/media/iconos/internacion.png">
-                    <h3>Seguimiento del paciente durante su hospitalización.
-                    </h3>
-                </div>
-                <div class="card">
-                    <img src="/media/iconos/dinero.png">
-                    <h3>Podrás gestionar tu facturación registrando copagos, liquidación de honorarios, etc.
-                    </h3>
-                </div>
-            </div>
-        </section>
-        <!-- INICIO NOSOTROS -->
-        <section id="nosotros" class="nosotros">
-            <h1>Nosotros</h1>
-            <div class="contenedorNosotros">
-                <img class="imgDoctorTecno" src="media/doctor_tecnologia.png" alt="img_doctor_2">
-                <div class="contenidoNosotros">
-                    <div class="cardNosotros">
-                        <h1>Nuestra visión</h1>
-                        <h4>Mejorar la atención médica a través de soluciones digitales innovadoras para centros de
-                            salud.
-                        </h4>
-                    </div>
-                    <div class="cardNosotros">
-                        <h1>Nuestra misión</h1>
-                        <h4>Ser líderes en el mercado de soluciones digitales para la salud, mejorando la vida de las
-                            personas y transformando el sector.
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- INICIO CONTACTO -->
-        <section class="contacto" id="contacto">
-            <h1>Contactanos</h1>
-            <h4>Si deseas más información sobre nuestros servicios, ya sos cliente o estás interesado en alguna
-                oportunidad
-                laboral, podes completar este formulario y nos comunicaremos a la brevedad.</h4>
-            <div class="contenedorContacto">
-                <div class="card">
-                    <h3>Encontranos...</h3>
-                    <b>Av. San Juan 1122</b>
-                    <b>Piso 3° CABA - CP 1043</b>
-                    <br>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.28218004422!2d-58.384343625404085!3d-34.62230875847828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28b572aeaf%3A0x59acbfc2da79f562!2sAv.%20San%20Juan%201122%2C%20C1147AAW%20CABA!5e0!3m2!1ses!2sar!4v1682978985668!5m2!1ses!2sar"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="card">
-                    <div class="formulario">
-                        <h3>Dejanos tu consulta...</h3>
-                        <form>
-                            <label for="nombre">Ingresa tu nombre:</label>
-                            <input type="text" name="nombre" required id="nombre" placeholder="Maria Perez">
-                            <label for="correo_usuario">Ingresa tu correo electrónico:</label>
-                            <input type="email" name="correo_usuario" required id="correo_usuario" size="50"
-                                placeholder="ejemplo@ejemplo.com">
-                            <label for="celular_usuario">Ingresa tu teléfono:</label>
-                            <input type="tel" name="celular_usuario" min="0" pattern="^[0-9]+" maxlength="10" required
-                                id="celular_usuario" size="50" placeholder="011-11111111">
-                            <label for="mensaje">Dejá tu mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Fin Seccion Inicio -->
     </main>
+
     <footer>
-        <div class="columna">
-            <img src="/media/iconos/ubicacion.png">
-            <p>Dirección</p>
-            <b>Av. San Juan 1122</b>
-            <b>Piso 3° CABA - CP 1043</b>
-        </div>
-        <div class="columna">
-            <img src="/media/iconos/sobre.png">
-            <p>Email</p>
-            <a href="mailto:info@quantuxsalud.com"><b>medifine@ejemplo.com.ar</b></a>
-        </div>
-        <div class="columna">
-            <img src="/media/iconos/telefono.png">
-            <p>Teléfono</p>
-            <a href="tel: 1122334455"><b>011 - 1122334455</b></a>
-        </div>
-        <div class="texto">
-            <p>© 2023 Medifine | Todos los derechos reservados.
-            </p>
-        </div>
+
     </footer>
+
 </body>
 
 </html>
