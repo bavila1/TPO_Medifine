@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Medifine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/favico.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./media/favico.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
@@ -33,6 +34,19 @@
             </ul>
         </div>
         <!--Fin menu hamburguesa  -->
+
+        <!--Banner  -->
+        <div id="weather-container">
+            <div class="weather-content" id="weather-content">
+              <div class="weather-icon" id="weather-icon"></div>
+              <div class="weather-info" id="weather-info">
+                <p id="temperature" class="temperature">Cargando...</p>
+                <p id="city" class="city">Cargando...</p>
+              </div>
+            </div>
+          </div>
+          <!--Fin Banner  -->
+
     </header>
     <main class="container">
         <!-- INICIO -->
@@ -97,13 +111,13 @@
                 <img class="imgDoctorTecno" src="./media/doctor_tecnologia.png" alt="img_doctor_2">
                 <div class="contenidoNosotros">
                     <div class="cardNosotros">
-                        <h1>Nuestra visión</h1>
+                        <h2>Nuestra visión</h2>
                         <h4>Mejorar la atención médica a través de soluciones digitales innovadoras para centros de
                             salud.
                         </h4>
                     </div>
                     <div class="cardNosotros">
-                        <h1>Nuestra misión</h1>
+                        <h2>Nuestra misión</h2>
                         <h4>Ser líderes en el mercado de soluciones digitales para la salud, mejorando la vida de las
                             personas y transformando el sector.
                         </h4>
@@ -127,24 +141,57 @@
                     <br>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.28218004422!2d-58.384343625404085!3d-34.62230875847828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28b572aeaf%3A0x59acbfc2da79f562!2sAv.%20San%20Juan%201122%2C%20C1147AAW%20CABA!5e0!3m2!1ses!2sar!4v1682978985668!5m2!1ses!2sar"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="400" height="345" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="card">
                     <div class="formulario">
                         <h3>Dejanos tu consulta...</h3>
-                        <form>
-                            <label for="nombre">Ingresa tu nombre:</label>
-                            <input type="text" name="nombre" required id="nombre" placeholder="Maria Perez">
-                            <label for="correo_usuario">Ingresa tu correo electrónico:</label>
-                            <input type="email" name="correo_usuario" required id="correo_usuario" size="50"
-                                placeholder="ejemplo@ejemplo.com">
-                            <label for="celular_usuario">Ingresa tu teléfono:</label>
-                            <input type="tel" name="celular_usuario" min="0" pattern="^[0-9]+" maxlength="10" required
-                                id="celular_usuario" size="50" placeholder="011-11111111">
-                            <label for="mensaje">Dejá tu mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-                            <button type="submit">Enviar</button>
+                        <form  class="formulario" id="formulario" action="https://formspree.io/f/moqzrzlk" method="POST">
+                            <div class="formulario_grupo" id="grupo_nombre">
+                                <label for="nombre">Ingresa tu nombre:</label>
+                                <div class="formulario_grupo-input">
+                                    <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Belen Perez" autocomplete="off">
+                                </div>
+                                <p class="formulario_input-error">Debe ingresar su nombre</p>
+                            </div>
+                            
+                            <div class="formulario_grupo" id="grupo_correo">
+                                <label for="correo_usuario">Ingresa tu correo electrónico:</label>
+                                <div class="formulario_grupo-input">
+                                    <input type="email" class="formulario_input" name="correo" id="correo" size="50"
+                                        placeholder="correo@ejemplo.com" autocomplete="off">
+                                </div>
+                                    <p class="formulario_input-error">El correo solo puede contener letras, numeros, 
+                                    puntos, guiones y guion bajo.</p>
+                            </div>
+
+                            <div class="formulario_grupo" id="grupo_telefono">
+                                <label for="celular_usuario">Ingresa tu teléfono:</label>
+                                <div class="formulario_grupo-input">
+                                    <input type="tel" class="formulario_input" name="telefono" id="telefono" placeholder="1122334455" autocomplete="off">
+                                </div>
+                                <p class="formulario_input-error">El telefono solo puede contener numeros sin espacios y el máximo son 14 dígitos.</p>
+                            </div>
+                            
+                            <div class="formulario_grupo" id="grupo_detalle">
+                                <label for="detalle">Dejá tu mensaje:</label>
+                                <div class="formulario_grupo-input">
+                                    <textarea id="detalle" class="formulario_input" name="detalle" rows="4"></textarea>
+                                </div>
+                                <p class="formulario_input-error">Debe ingresar un texto a enviar.</p>
+                            </div>                           
+
+                            <div class="formulario_mensaje" id="formulario_mensaje">
+                                <p> <i class="fas fa-exclamation-circle"></i> <b>Error:</b> Complete correctamente el formulario. </p>
+                            </div>
+
+                            <div class="formulario_grupo formulario_grupo-btn-enviar">
+                                <button type="submit" class="formulario_btn">Enviar</button>
+                                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Mensaje enviado exitosamente, nos comunicarames a la brevedad. Gracias!</p>
+                                <p class="formulario_mensaje-error" id="formulario_mensaje-error">Error, no se pudo enviar el formulario, vuelva a intentarlo en unos minutos!</p>
+                            </div>                           
+
                         </form>
                     </div>
                 </div>
@@ -174,5 +221,7 @@
         </div>
     </footer>
 </body>
+
+<script src="./script.js"></script>
 
 </html>

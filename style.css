@@ -15,6 +15,13 @@ h1 {
   color: rgb(255, 91, 98);
 }
 
+h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  color: rgb(255, 91, 98);
+}
+
 /* Estilo Botones */
 button {
   background-color: rgb(255, 91, 98);
@@ -115,6 +122,42 @@ header img {
   color: rgb(255, 91, 98);
 }
 
+/*Estilo Banner tiempo*/
+#weather-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo y la opacidad según tus necesidades */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  z-index: 9999; /* Ajusta el valor de z-index según sea necesario */
+}
+
+#weather-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#weather-icon {
+  margin-right: 10px;
+}
+
+#temperature {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#city {
+  font-size: 14px;
+  margin: 0;
+}
+
+
 /* Estilo inicio */
 #inicio {
   display: flex;
@@ -124,6 +167,7 @@ header img {
   background-size: 100%;
   justify-content: center;
 }
+
 
 .iconosInicio {
   display: flex;
@@ -218,7 +262,7 @@ header img {
 
 .contacto {
   background-color: #eee;
-  padding-top: 80px;
+  padding-top: 30px;
 }
 
 .contacto h4 {
@@ -228,19 +272,133 @@ header img {
   text-align: center;
 }
 
+/*Estilos Formulario */
 .formulario label {
   display: block;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
-.formulario input,
 .formulario textarea {
   display: block;
   font-size: 16px;
   padding: 5px;
   width: 100%;
   margin-bottom: 10px;
+}
+
+.formulario_input {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+	background: #fff;
+	border: 2px solid rgba(164, 161, 161, 0.5);
+	border-radius: 3px;
+	transition: .3s ease all;
+}
+
+.formulario_input:-webkit-autofill {
+  -webkit-transition: background-color 0s;
+  transition: background-color 0s;
+}
+
+.formulario_input:focus {
+	border: 3px solid  rgb(158, 239, 233);
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario_input-error {
+	font-size: 12px;
+	margin-bottom: 10px;
+  color:#bb2929;
+	display: none;
+}
+
+.formulario_input-error-activo {
+	display: block;
+}
+
+.formulario_validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario_mensaje {
+	height: 45px;
+	line-height: 45px;
+  width: auto;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+  display: none;
+}
+
+.formulario_mensaje-activo {
+	display: block;
+}
+
+.formulario_mensaje p {
+	margin: 0;
+  color: white;
+}
+
+.formulario_btn {
+  margin-top: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario_btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario_mensaje-exito {
+	font-size: 16px;
+	color: #119200;
+	display: none;
+}
+
+.formulario_mensaje-exito-activo {
+	display: block;
+}
+
+.formulario_mensaje-error {
+	font-size: 16px;
+	color: #ff0000;
+	display: none;
+}
+
+.formulario_mensaje-error-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario_grupo-correcto .formulario_validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario_grupo-incorrecto .formulario_label {
+	color: #bb2929;
+}
+
+.formulario_grupo-incorrecto .formulario_validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario_grupo-incorrecto .formulario_input {
+	border: 3px solid #bb2929;
 }
 
 /* Estilo nosotros */
@@ -250,15 +408,17 @@ header img {
 }
 
 .nosotros h1 {
-  padding-top: 80px;
+  padding-top: 30px;
 }
 
 .contenedorNosotros {
-  height: 500px;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  align-items: center;
+  grid-gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
 }
 
 .contenidoNosotros {
@@ -266,12 +426,18 @@ header img {
   font-size: large;
   margin-right: 100px;
   text-align: justify;
+  max-width: 100%; /* La imagen no supera el ancho del contenedor */
+  height: auto;
+  margin: 10px;
 }
 
 .imgDoctorTecno {
   grid-column: 1 / 2;
-  width: 650px;
-  margin-left: 50px;
+  /* width: 650px; */
+  /* margin-left: 50px; */
+  max-width: 100%; /* La imagen no supera el ancho del contenedor */  
+  height: auto;
+  margin: 21px;
 }
 
 .cardNosotros {
@@ -285,10 +451,6 @@ header img {
   justify-content: center;
   margin: 10px;
   height: 210px;
-}
-
-.cardNosotros h1 {
-  margin-top: -50px;
 }
 
 .cardNosotros h4 {
@@ -385,6 +547,33 @@ footer {
   }
   /* FIN INICIO */
 
+  /* Agregado Gustavo */
+  .nosotros{
+    background-image:none;
+    background-color: rgb(158, 239, 233);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  .imgDoctorTecno {
+    display: none;
+  }
+  .contenedorNosotros {
+    grid-template-columns: 1fr;
+    }
+
+  .cardNosotros{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .contenedorContacto {
+    grid-template-columns: 1fr;
+  }
+
+  #weather-container {
+    display: none;
+  }
+  /* Fin Agregado Gustavo */
+
   /* FOOTER */
   footer {
     font-size: 12px;
@@ -441,6 +630,33 @@ footer {
     padding: 12px 35px;
   }
   /* FIN INICIO */
+
+  /* Agregado Gustavo */
+  .nosotros{
+    background-image:url("./media/doctor_tecnologia.png");
+    border: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  .imgDoctorTecno {
+    display: none;
+  }
+  .contenedorNosotros {
+    grid-template-columns: 1fr;
+    }
+  .contenidoNosotros {
+    grid-column: 1 / 1;
+  }
+  .cardNosotros{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .contenedorContacto {
+    grid-template-columns: 1fr;
+  }
+  .cardContacto{
+    grid-column: 1 / 1;
+  }
+  /* Fin Agregado Gustavo */
 
   /* FOOTER */
   footer {
