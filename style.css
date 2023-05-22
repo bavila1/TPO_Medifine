@@ -29,13 +29,16 @@ button {
   font-size: 18px;
   font-weight: bold;
   padding: 16px 35px;
-  border-radius: 5px;
   border: none;
   cursor: pointer;
+  margin-top: 10px;
+  border-radius: 15px;
+  transition: 0.1s ease all;
 }
 
 button:hover {
   background-color: rgb(238, 65, 65);
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
 }
 
 /* Encabezado */
@@ -127,7 +130,12 @@ header img {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo y la opacidad según tus necesidades */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Ajusta el color de fondo y la opacidad según tus necesidades */
   color: #ffffff;
   font-family: Arial, sans-serif;
   display: flex;
@@ -157,7 +165,6 @@ header img {
   margin: 0;
 }
 
-
 /* Estilo inicio */
 #inicio {
   display: flex;
@@ -167,7 +174,6 @@ header img {
   background-size: 100%;
   justify-content: center;
 }
-
 
 .iconosInicio {
   display: flex;
@@ -191,7 +197,8 @@ header img {
 }
 
 .contenidoInicio h2 {
-  color: rgb(8, 75, 143);
+  color: rgb(158, 239, 233);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0);
   box-sizing: border-box;
   font-weight: 400;
   font-size: 37px;
@@ -293,10 +300,10 @@ header img {
   padding: 5px;
   width: 100%;
   margin-bottom: 10px;
-	background: #fff;
-	border: 2px solid rgba(164, 161, 161, 0.5);
-	border-radius: 3px;
-	transition: .3s ease all;
+  background: #fff;
+  border: 2px solid rgba(164, 161, 161, 0.5);
+  border-radius: 3px;
+  transition: 0.3s ease all;
 }
 
 .formulario_input:-webkit-autofill {
@@ -305,100 +312,87 @@ header img {
 }
 
 .formulario_input:focus {
-	border: 3px solid  rgb(158, 239, 233);
-	outline: none;
-	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+  border: 3px solid rgb(158, 239, 233);
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 .formulario_input-error {
-	font-size: 12px;
-	margin-bottom: 10px;
-  color:#bb2929;
-	display: none;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #bb2929;
+  display: none;
 }
 
 .formulario_input-error-activo {
-	display: block;
+  display: block;
 }
 
 .formulario_validacion-estado {
-	position: absolute;
-	right: 10px;
-	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
-	opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
 }
 
 .formulario_mensaje {
-	height: 45px;
-	line-height: 45px;
+  height: 45px;
+  line-height: 45px;
   width: auto;
-	background: #F66060;
-	padding: 0 15px;
-	border-radius: 3px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
   display: none;
 }
 
 .formulario_mensaje-activo {
-	display: block;
+  display: block;
 }
 
 .formulario_mensaje p {
-	margin: 0;
+  margin: 0;
   color: white;
 }
 
-.formulario_btn {
-  margin-top: 10px;
-	font-weight: bold;
-	border: none;
-	border-radius: 15px;
-	cursor: pointer;
-	transition: .1s ease all;
-}
-
-.formulario_btn:hover {
-	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
-}
-
 .formulario_mensaje-exito {
-	font-size: 16px;
-	color: #119200;
-	display: none;
+  font-size: 16px;
+  color: #119200;
+  display: none;
 }
 
 .formulario_mensaje-exito-activo {
-	display: block;
+  display: block;
 }
 
 .formulario_mensaje-error {
-	font-size: 16px;
-	color: #ff0000;
-	display: none;
+  font-size: 16px;
+  color: #ff0000;
+  display: none;
 }
 
 .formulario_mensaje-error-activo {
-	display: block;
+  display: block;
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario_grupo-correcto .formulario_validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
+  color: #1ed12d;
+  opacity: 1;
 }
 
 .formulario_grupo-incorrecto .formulario_label {
-	color: #bb2929;
+  color: #bb2929;
 }
 
 .formulario_grupo-incorrecto .formulario_validacion-estado {
-	color: #bb2929;
-	opacity: 1;
+  color: #bb2929;
+  opacity: 1;
 }
 
 .formulario_grupo-incorrecto .formulario_input {
-	border: 3px solid #bb2929;
+  border: 3px solid #bb2929;
 }
 
 /* Estilo nosotros */
@@ -435,7 +429,7 @@ header img {
   grid-column: 1 / 2;
   /* width: 650px; */
   /* margin-left: 50px; */
-  max-width: 100%; /* La imagen no supera el ancho del contenedor */  
+  max-width: 100%; /* La imagen no supera el ancho del contenedor */
   height: auto;
   margin: 21px;
 }
@@ -548,8 +542,8 @@ footer {
   /* FIN INICIO */
 
   /* Agregado Gustavo */
-  .nosotros{
-    background-image:none;
+  .nosotros {
+    background-image: none;
     background-color: rgb(158, 239, 233);
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -559,9 +553,9 @@ footer {
   }
   .contenedorNosotros {
     grid-template-columns: 1fr;
-    }
+  }
 
-  .cardNosotros{
+  .cardNosotros {
     background-color: rgba(255, 255, 255, 0.5);
   }
 
@@ -632,8 +626,8 @@ footer {
   /* FIN INICIO */
 
   /* Agregado Gustavo */
-  .nosotros{
-    background-image:url("./media/doctor_tecnologia.png");
+  .nosotros {
+    background-image: url("./media/doctor_tecnologia.png");
     border: 2px solid #ddd;
     border-radius: 10px;
   }
@@ -642,18 +636,18 @@ footer {
   }
   .contenedorNosotros {
     grid-template-columns: 1fr;
-    }
+  }
   .contenidoNosotros {
     grid-column: 1 / 1;
   }
-  .cardNosotros{
+  .cardNosotros {
     background-color: rgba(255, 255, 255, 0.5);
   }
 
   .contenedorContacto {
     grid-template-columns: 1fr;
   }
-  .cardContacto{
+  .cardContacto {
     grid-column: 1 / 1;
   }
   /* Fin Agregado Gustavo */

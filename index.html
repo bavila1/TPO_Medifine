@@ -38,14 +38,14 @@
         <!--Banner  -->
         <div id="weather-container">
             <div class="weather-content" id="weather-content">
-              <div class="weather-icon" id="weather-icon"></div>
-              <div class="weather-info" id="weather-info">
-                <p id="temperature" class="temperature">Cargando...</p>
-                <p id="city" class="city">Cargando...</p>
-              </div>
+                <div class="weather-icon" id="weather-icon"></div>
+                <div class="weather-info" id="weather-info">
+                    <p id="temperature" class="temperature">Cargando...</p>
+                    <p id="city" class="city">Cargando...</p>
+                </div>
             </div>
-          </div>
-          <!--Fin Banner  -->
+        </div>
+        <!--Fin Banner  -->
 
     </header>
     <main class="container">
@@ -64,7 +64,7 @@
                     Con un acceso digital a tus centros de salud, brindamos una atención más segura, personalizada y
                     efectiva.
                 </p>
-                <button id="conocerMas">Conocé más</button>
+                <button id="conocerMas" href="#formulario">Conocé más</button>
             </div>
         </section>
         <!-- INICIO SERVICIOS -->
@@ -147,50 +147,56 @@
                 <div class="card">
                     <div class="formulario">
                         <h3>Dejanos tu consulta...</h3>
-                        <form  class="formulario" id="formulario" action="https://formspree.io/f/moqzrzlk" method="POST">
+                        <form class="formulario" id="formulario" action="https://formspree.io/f/moqzrzlk" method="POST">
                             <div class="formulario_grupo" id="grupo_nombre">
                                 <label for="nombre">Ingresa tu nombre:</label>
                                 <div class="formulario_grupo-input">
-                                    <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Belen Perez" autocomplete="off">
+                                    <input type="text" class="formulario_input" name="nombre" id="nombre"
+                                        placeholder="Belen Perez" autocomplete="off">
                                 </div>
                                 <p class="formulario_input-error">Debe ingresar su nombre</p>
                             </div>
-                            
+
                             <div class="formulario_grupo" id="grupo_correo">
                                 <label for="correo_usuario">Ingresa tu correo electrónico:</label>
                                 <div class="formulario_grupo-input">
                                     <input type="email" class="formulario_input" name="correo" id="correo" size="50"
                                         placeholder="correo@ejemplo.com" autocomplete="off">
                                 </div>
-                                    <p class="formulario_input-error">El correo solo puede contener letras, numeros, 
+                                <p class="formulario_input-error">El correo solo puede contener letras, numeros,
                                     puntos, guiones y guion bajo.</p>
                             </div>
 
                             <div class="formulario_grupo" id="grupo_telefono">
                                 <label for="celular_usuario">Ingresa tu teléfono:</label>
                                 <div class="formulario_grupo-input">
-                                    <input type="tel" class="formulario_input" name="telefono" id="telefono" placeholder="1122334455" autocomplete="off">
+                                    <input type="tel" class="formulario_input" name="telefono" id="telefono"
+                                        placeholder="1122334455" autocomplete="off">
                                 </div>
-                                <p class="formulario_input-error">El telefono solo puede contener numeros sin espacios y el máximo son 14 dígitos.</p>
+                                <p class="formulario_input-error">El telefono solo puede contener numeros sin espacios y
+                                    el máximo son 14 dígitos.</p>
                             </div>
-                            
+
                             <div class="formulario_grupo" id="grupo_detalle">
                                 <label for="detalle">Dejá tu mensaje:</label>
                                 <div class="formulario_grupo-input">
                                     <textarea id="detalle" class="formulario_input" name="detalle" rows="4"></textarea>
                                 </div>
                                 <p class="formulario_input-error">Debe ingresar un texto a enviar.</p>
-                            </div>                           
+                            </div>
 
                             <div class="formulario_mensaje" id="formulario_mensaje">
-                                <p> <i class="fas fa-exclamation-circle"></i> <b>Error:</b> Complete correctamente el formulario. </p>
+                                <p> <i class="fas fa-exclamation-circle"></i> <b>Error:</b> Complete correctamente el
+                                    formulario. </p>
                             </div>
 
                             <div class="formulario_grupo formulario_grupo-btn-enviar">
                                 <button type="submit" class="formulario_btn">Enviar</button>
-                                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Mensaje enviado exitosamente, nos comunicarames a la brevedad. Gracias!</p>
-                                <p class="formulario_mensaje-error" id="formulario_mensaje-error">Error, no se pudo enviar el formulario, vuelva a intentarlo en unos minutos!</p>
-                            </div>                           
+                                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Mensaje enviado
+                                    exitosamente, nos comunicarames a la brevedad. Gracias!</p>
+                                <p class="formulario_mensaje-error" id="formulario_mensaje-error">Error, no se pudo
+                                    enviar el formulario, vuelva a intentarlo en unos minutos!</p>
+                            </div>
 
                         </form>
                     </div>
