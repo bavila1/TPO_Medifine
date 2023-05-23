@@ -469,10 +469,8 @@ footer {
   align-items: center;
 }
 
-.columna img {
-  max-width: 40px;
-  height: auto;
-  margin-bottom: 10px;
+.columna i {
+  font-size: 30px;
 }
 
 .columna a {
@@ -581,8 +579,8 @@ footer {
     margin-bottom: 20px;
   }
 
-  .columna img {
-    max-width: 30px;
+  .columna i {
+    font-size: 20px;
   }
 
   .texto {
